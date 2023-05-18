@@ -4,7 +4,7 @@ function [outputParamStats, protocolOutput, h] = plotSubjectData_v3(fileList,lis
 for k = 1:length(fileList)
     folderPath = fullfile(listing(k+2).folder, listing(k+2).name);
     addpath(folderPath);
-    mkdir(protocolNames{k});
+    %mkdir(protocolNames{k});
     for ii = 1:length(fileList(k).files)
         data = table2array(readtable(fileList(k).files(ii).name));
         dist = data(:,2);
